@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Example File
 
 A brief description of what your project does and who it's for.
 
