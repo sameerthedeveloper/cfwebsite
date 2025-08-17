@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/output.css">
+    <!-- <link rel="stylesheet" href="./src/output.css"> -->
     <link rel="stylesheet" href="/icons/css/all.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="/gsap/src/all.js">
+    <!-- Remove This After Developement -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>Document</title>
 </head>
+
 <body class="">
     <div class="flex justify-between items-center p-5 w-full border-b-1 border-gray-300 shadow-md">
-        <h1 class="text-2xl font-bold ">Website</h1>
-        <div class="font-bold border-1 border-gray-200 shadow-md hover:shadow-lg hover:border-gray-300  p-5  h-4 w-3 rounded-full flex justify-center items-center ">
-            <i class="fas fa-info text-blue-500 font-bold "></i>
+        <img src="/assets/logo.png" alt="Cinema Focus" class="h-15 w-50 ">
+        <div class="group flex gap-10 text-[12px] uppercase transition-colors mr-5 max-md:hidden"
+            style="font-family: 'DM Sans', HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: 700;">
+            <button class="hover:text-red-500 duration-300">HOME</button>
+            <button class="hover:text-red-500 duration-300">ABOUT</button>
+            <button class="hover:text-red-500 duration-300">EXPLORE</button>
+            <button class="hover:text-red-500 duration-300">NEW ARRIVALS</button>
+            <button class="hover:text-red-500 duration-300">DEALERS</button>
 
+            <button class="hover:text-red-500 duration-300">CONTACT</button>
         </div>
+
+        <div class="group min-lg:hidden font-bold border border-gray-200 shadow-md hover:shadow-xl hover:bg-gray-300 transition-all duration-300 hover:border-gray-300 p-4 h-6 w-4 rounded-full flex justify-center items-center cursor-pointer">
+  <i class="fas fa-bars text-sm text-black group-hover:text-red-500 transition-colors duration-300"></i>
+</div>
+
+        <!-- <div class="flex gap-4">
+    <div class="group font-bold border border-gray-200 shadow-md hover:shadow-xl hover:bg-gray-300 transition-all duration-300 hover:border-gray-300 p-4 h-6 w-4 rounded-full flex justify-center items-center cursor-pointer">
+  <i class="fas fa-user text-sm text-black group-hover:text-red-500 transition-colors duration-300"></i>
+</div>
+<div class="group font-bold border border-gray-200 shadow-md hover:shadow-xl hover:bg-gray-300 transition-all duration-300 hover:border-gray-300 p-4 h-6 w-4 rounded-full flex justify-center items-center cursor-pointer">
+  <i class="fas fa-user text-sm text-black group-hover:text-red-500 transition-colors duration-300"></i>
+</div>
+</div> -->
+
     </div>
 </body>
+
 </html>

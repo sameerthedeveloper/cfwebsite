@@ -1,0 +1,8 @@
+.first-letter-capital::first-letter {
+  text-transform: uppercase;
+}
+
+
+.cf-menu-font {
+    font-family: "DM Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande";
+}
