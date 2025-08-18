@@ -20,7 +20,7 @@
 <body class="m-0 p-0 box-border">
     <!-- Header -->
     <div id="mobile-menu"
-        class="h-20 flex justify-between items-center p-5 w-full border-b border-gray-300 shadow-md sticky top-0 bg-white z-50">
+        class="h-20 flex justify-between absolute items-center p-5 w-full border-b border-gray-300 shadow-md  top-0 bg-white z-50 fixed">
         <img src="./assets/logo.png" alt="Cinema Focus" class="h-15 w-50" />
         <div class="group flex gap-10 text-[12px] uppercase transition-colors mr-5 max-md:hidden"
             style="font-family: 'DM Sans', HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: 700;">
@@ -39,9 +39,10 @@
 
         
     </div>
-    <div id="menu" class="flex flex-col absolute w-full bg-gray-400 top-20 z-50 p-4 gap-5 text-white"
+    <div class="h-20"></div>
+    <div id="menu" class="group flex flex-col absolute w-full bg-gray-400 top-20 z-50 p-4 gap-5 text-white fixed "
     style="font-family: 'DM Sans', HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: 700;">
-            <button class="hover:text-red-500 duration-300 cursor-pointer">HOME</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer  ">HOME</button>
             <button class="hover:text-red-500 duration-300 cursor-pointer">ABOUT</button>
             <button class="hover:text-red-500 duration-300 cursor-pointer">EXPLORE</button>
             <button class="hover:text-red-500 duration-300 cursor-pointer">NEW ARRIVALS</button>
