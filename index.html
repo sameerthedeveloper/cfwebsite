@@ -2,46 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="./src/output.css"> -->
     <link rel="stylesheet" href="./icons/css/all.css">
     <link rel="stylesheet" href="./src/style.css">
-    <link rel="stylesheet" href="./gsap/src/all.js">
-    <!-- Remove This After Developement -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Tailwind CDN (For development only) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <title>Document</title>
 </head>
 
-<body class="">
-    <div class="flex justify-between items-center p-5 w-full border-b-1 border-gray-300 shadow-md">
-        <img src="./assets/logo.png" alt="Cinema Focus" class="h-15 w-50 ">
+<body class="m-0 p-0 box-border">
+    <!-- Header -->
+    <div id="mobile-menu"
+        class="h-20 flex justify-between items-center p-5 w-full border-b border-gray-300 shadow-md sticky top-0 bg-white z-50">
+        <img src="./assets/logo.png" alt="Cinema Focus" class="h-15 w-50" />
         <div class="group flex gap-10 text-[12px] uppercase transition-colors mr-5 max-md:hidden"
             style="font-family: 'DM Sans', HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: 700;">
-            <button class="hover:text-red-500 duration-300">HOME</button>
-            <button class="hover:text-red-500 duration-300">ABOUT</button>
-            <button class="hover:text-red-500 duration-300">EXPLORE</button>
-            <button class="hover:text-red-500 duration-300">NEW ARRIVALS</button>
-            <button class="hover:text-red-500 duration-300">DEALERS</button>
-
-            <button class="hover:text-red-500 duration-300">CONTACT</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">HOME</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">ABOUT</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">EXPLORE</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">NEW ARRIVALS</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">DEALERS</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">CONTACT</button>
         </div>
 
-        <div class="group min-lg:hidden font-bold border border-gray-200 shadow-md hover:shadow-xl hover:bg-gray-300 transition-all duration-300 hover:border-gray-300 p-4 h-6 w-4 rounded-full flex justify-center items-center cursor-pointer">
-  <i class="fas fa-bars text-sm text-black group-hover:text-red-500 transition-colors duration-300"></i>
-</div>
+        <div id="menubtn"
+            class="group min-lg:hidden font-bold border border-gray-200 shadow-md hover:shadow-xl hover:bg-gray-300 transition-all duration-300 hover:border-gray-300 p-4 h-6 w-4 rounded-full flex justify-center items-center cursor-pointer">
+            <i class="fas fa-bars text-sm text-black group-hover:text-red-500 transition-colors duration-300"></i>
+        </div>
 
-        <!-- <div class="flex gap-4">
-    <div class="group font-bold border border-gray-200 shadow-md hover:shadow-xl hover:bg-gray-300 transition-all duration-300 hover:border-gray-300 p-4 h-6 w-4 rounded-full flex justify-center items-center cursor-pointer">
-  <i class="fas fa-user text-sm text-black group-hover:text-red-500 transition-colors duration-300"></i>
-</div>
-<div class="group font-bold border border-gray-200 shadow-md hover:shadow-xl hover:bg-gray-300 transition-all duration-300 hover:border-gray-300 p-4 h-6 w-4 rounded-full flex justify-center items-center cursor-pointer">
-  <i class="fas fa-user text-sm text-black group-hover:text-red-500 transition-colors duration-300"></i>
-</div>
-</div> -->
-
+        
     </div>
+    <div id="menu" class="flex flex-col absolute w-full bg-gray-400 top-20 z-50 p-4 gap-5 text-white"
+    style="font-family: 'DM Sans', HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: 700;">
+            <button class="hover:text-red-500 duration-300 cursor-pointer">HOME</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">ABOUT</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">EXPLORE</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">NEW ARRIVALS</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">DEALERS</button>
+            <button class="hover:text-red-500 duration-300 cursor-pointer">CONTACT</button>
+        </div>
+
+    <!-- Sections -->
+    <div class="flex justify-center items-center bg-gray-300" style="height: calc(100vh - 80px);">
+        <h1 class="text-7xl font-bold">HOME</h1>
+    </div>
+
+    <div class="flex justify-center items-center bg-amber-300" style="height: calc(100vh - 80px);">
+        <h1 class="text-7xl font-bold">ABOUT</h1>
+    </div>
+
+    <div class="flex justify-center items-center bg-blue-300" style="height: calc(100vh - 80px);">
+        <h1 class="text-7xl font-bold">EXPLORE</h1>
+    </div>
+
+    <div class="flex justify-center items-center bg-red-300" style="height: calc(100vh - 80px);">
+        <h1 class="text-7xl font-bold">NEW ARRIVALS</h1>
+    </div>
+
+    <div class="flex justify-center items-center bg-green-300" style="height: calc(100vh - 80px);">
+        <h1 class="text-7xl font-bold">PHOTOS</h1>
+    </div>
+
+    <div class="flex justify-center items-center bg-yellow-300" style="height: calc(100vh - 80px);">
+        <h1 class="text-7xl font-bold">CONTACT</h1>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/menuAnimation.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
