@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector("#menubtn");
   const menu = document.getElementById("menu");
   const links = menu.querySelectorAll("button");
+  const menuClose = document.querySelector("#closeMenu")
 
   // Start with hidden + collapsed
   gsap.set(menu, { height: 0, opacity: 0, display: "none" });
@@ -60,4 +61,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     isOpen = !isOpen;
   });
+
+    menuClose.addEventListener("click", () => {
+    if (!isOpen) {
+      tl.play();
+    } else {
+      gsap.to(links, {
+        opacity: 0,
+        y: 20,
+        duration: 0.3,
+        stagger: {
+          each: 0.05,
+          from: "end",
+        },
+        ease: "power1.in",
+        onComplete: () => {
+          gsap.to(menu, {
+            height: 0,
+            opacity: 0,
+            duration: 0.4,
+            ease: "power1.in",
+            onComplete: () => {
+              gsap.set(menu, { display: "none" });
+              tl.pause(0); // Reset timeline
+            },
+          });
+        },
+      });
+    }
+
+    isOpen = !isOpen;
+  });
 });
+
+
+
